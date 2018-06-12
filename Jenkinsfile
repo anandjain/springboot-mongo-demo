@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                dir('/home/ubuntu/anand_git/springboot-mongo-demo/docker/') {
+                dir('docker/') {
                 sh 'sudo docker build --tag=spring-demo-1.0 .'
                 }
 	    }
