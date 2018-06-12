@@ -12,9 +12,10 @@ pipeline {
                 echo 'Testing..'
             }
         }
-        stage('Deploy') {
+        stage('Deploy') 
+        dir('/home/ubuntu/anand_git/springboot-mongo-demo/docker/') {
             steps {
-                sh 'cd  springboot-mongo-demo/docker/ && docker build --tag=spring-demo-1.0 .'
+                sh 'docker build --tag=spring-demo-1.0 .'
             }
         }
     }
