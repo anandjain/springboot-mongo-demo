@@ -17,7 +17,6 @@ pipeline {
         stage('Deploying on Kubernetes') {
             steps {
                 sh 'kubectl create -f kubefiles/spring-demo-rc.yaml'
-                }
 	    }
         }
     }
