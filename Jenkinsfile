@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                cd 'cd  springboot-mongo-demo/docker/ && docker build --tag=spring-demo-1.0 .'
+                sh 'cd  springboot-mongo-demo/docker/ && docker build --tag=spring-demo-1.0 .'
             }
         }
     }
